@@ -8,10 +8,4 @@ $(document).ready(function() {
     for (var key in student) {
         console.log('Chiave:', key, '/', 'Valore:', student[key]);
     }
-
-
-
-
-
-
 }); // <-- End ready
