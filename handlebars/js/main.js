@@ -33,16 +33,39 @@ $(document).ready(function() {
         setTimeout(function(){
             
             var message = {
-                text: msgText,
+                text: 'Okey-dokey!',
                 time: '16:01',
                 send: 'Template-message--received'
             }
             
             var html = template(message);
             chat.append(html);
-            input.val('');
 
         }, 1000);
     });
+
+    // Stored messages
+    var storedMsg = [
+        {
+            text: 'A che ora ci vediamo?',
+            time: '16:01',
+            send: 'Template-message--received' 
+        },
+        {
+            text: 'Facciamo alle 16 e 30?',
+            time: '16:02',
+            send: 'Template-message--sent' 
+        },
+        {
+            text: 'Ok, a dopo',
+            time: '16:03',
+            send: 'Template-message--received' 
+        }
+    ];
+    
+    for (var i = 0; i < storedMsg.length; i++) {
+        var html = template(storedMsg[i])
+        chat.append(html);
+    }
 
 }); // <-- End ready
